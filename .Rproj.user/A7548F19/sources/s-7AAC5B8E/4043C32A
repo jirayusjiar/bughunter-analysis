@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1564553291437.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "4043C32A",
+    "lastKnownWriteTime" : 1564553669,
+    "last_content_update" : 1564558156790,
+    "path" : "~/Dropbox/Source/Repository/bughunter-analysis/model-performance.R",
+    "project_path" : "model-performance.R",
+    "properties" : {
+        "cursorPosition" : "6,58",
+        "scrollLine" : "1",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

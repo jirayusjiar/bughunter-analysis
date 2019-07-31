@@ -1,0 +1,35 @@
+
+
+
+library(Rnalytica)
+library(Jmisc)
+
+dataset <- read.csv2('data/tj.csv', header = T, sep = ',')
+
+indep <- names(dataset)[-1]
+dep <- indep[length(indep)]
+indep <- indep[-length(indep)]
+
+dataset[, dep] <-
+  factor(dataset[, dep], labels = c('clean', 'defect'))
+
+# convert factor to numeric
+dataset[, indep] <- (as.data.frame(do.call(cbind, lapply(dataset[, indep], function(x) {
+  if (is.factor(x)) {
+    o = as.numeric(levels(x)[x])
+  } else {
+    o = x
+  }
+  o
+}))))
+
+results <-
+  fit(
+    dataset,
+    dep,
+    indep,
+    classifier = 'lr',
+    validation = 'boot',
+    validation.params = list(boot.n = 10)
+  )
+
